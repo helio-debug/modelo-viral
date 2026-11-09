@@ -127,18 +127,18 @@ h1{text-align:center;justify-self:center;font-size:min(6.6vw,3.4svh);line-height
 .ant li{text-decoration:line-through;text-decoration-color:#E0352B;text-decoration-thickness:2px}.dep{background:var(--tinta);color:#fff;box-shadow:9px 9px 0 var(--lima)}.dep li{border-color:rgba(255,255,255,.2)}.dep h3{color:var(--lima)}
 .perfil{display:flex;gap:16px;align-items:center;margin-bottom:26px}.perfil img{width:72px;height:72px;border-radius:50%;border:3px solid var(--tinta)}.perfil b{display:block;font-size:22px}.perfil span{font-size:16px}
 .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:30px}.nums div{background:var(--tinta);color:#fff;padding:20px}.nums b{display:block;font:400 clamp(38px,5.6vw,76px)/1 Anton;color:var(--lima)}.nums span{font-size:15px}
-.refs{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}.refs.q4{grid-template-columns:repeat(4,1fr)}
+.refs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.refs.q4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .ref{display:block;text-decoration:none;color:inherit;font-size:13px;line-height:1.25}.ref img{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#222;border:2px solid currentColor}
-.ref b{display:block;font:400 clamp(20px,2.2vw,28px)/1.1 Anton;margin-top:8px}.tinta .ref b{color:var(--lima)}.ref span{display:block}.ref em{display:block;font-style:normal;opacity:.7;margin-top:2px}
+.ref b{display:block;font:400 clamp(20px,2.2vw,28px)/1.1 Anton;margin-top:8px}.tinta .ref b{color:var(--lima)}.ref span{display:block;overflow-wrap:anywhere}.ref em{display:block;font-style:normal;opacity:.7;margin-top:2px}
 .nota{font-size:14px;margin-top:22px;opacity:.75;max-width:60em}.nota.cl{color:#fff}
-.loops{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}.loop{position:relative;background:var(--tinta)}.loop video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}.loop figcaption{background:var(--lima);font:700 13px 'JetBrains Mono','Courier Prime',monospace;padding:4px 6px;overflow:hidden;white-space:nowrap}
+.loops{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.loop{position:relative;background:var(--tinta)}.loop video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}.loop figcaption{background:var(--lima);font:700 13px 'JetBrains Mono','Courier Prime',monospace;padding:4px 6px;overflow:hidden;white-space:nowrap}
 .stack{list-style:none;margin-bottom:34px}.stack li{padding:.8em 0 .8em 2em;border-top:3px solid var(--tinta);position:relative}.stack li::before{content:'✔';position:absolute;left:.1em;font-weight:700}.stack b{font-weight:700}
 .preco{background:var(--tinta);color:#fff;text-align:center;padding:clamp(28px,4vw,48px);box-shadow:10px 10px 0 #fff}.preco span{display:block;font-size:17px}.preco b{display:block;font:400 clamp(72px,12vw,150px)/1 Anton;color:var(--lima)}.preco em{display:block;font:400 clamp(22px,2.6vw,32px) Anton;font-style:normal;text-transform:uppercase;margin-bottom:.5em}.preco small{display:block;margin-top:1.4em;font-size:15px}.preco .cta{background:var(--lima);color:var(--tinta);border-color:var(--lima);box-shadow:7px 7px 0 #fff}
 .chato{list-style:none;margin-bottom:34px}.chato li{padding:.85em 0;border-top:3px solid var(--tinta)}
 .gar{display:flex;gap:26px;align-items:center;background:var(--lima);padding:clamp(20px,3vw,34px);transform:rotate(-.6deg)}.gar b{font:400 clamp(44px,6vw,72px)/1 Anton;text-transform:uppercase;white-space:nowrap}
 .faq details{border-top:3px solid var(--tinta);padding:.9em 0}.faq summary{cursor:pointer;font:400 clamp(22px,2.6vw,32px) Anton;text-transform:uppercase}.faq details p{margin-top:.6em;max-width:44em}
 .fim h2{max-width:20em}
-@media (max-width:860px){.ad,.nums{grid-template-columns:1fr}.refs,.loops{grid-template-columns:repeat(3,1fr)}.refs.q4{grid-template-columns:repeat(2,1fr)}.gar{flex-direction:column;align-items:flex-start}.cta{width:100%;text-align:center}}
+@media (max-width:860px){.ad,.nums{grid-template-columns:1fr}.refs,.loops{grid-template-columns:repeat(3,minmax(0,1fr))}.refs.q4{grid-template-columns:repeat(2,minmax(0,1fr))}.gar{flex-direction:column;align-items:flex-start}.cta{width:100%;text-align:center}}
 /*/RESTO*/
 </style>
 </head>
