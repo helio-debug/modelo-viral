@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WW4JRN7');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFFFF">
+<title>Modelo Viral · Aula</title>
+<meta name="description" content="Como viralizar no Instagram e TikTok copiando (quase) na cara dura estes 14 formatos de vídeos feitos 100% com IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lima:#D4FF3C;
+  --tinta:#0D0D0D;
+  --branco:#FFFFFF;
+  --grao:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--branco);color:var(--tinta)}
+body{-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+main{
+  height:100vh;height:100svh;
+  display:flex;flex-direction:column;align-items:center;
+  padding:clamp(18px,3.6svh,38px) 28px clamp(16px,2.8svh,30px);
+  gap:clamp(10px,2svh,22px);
+}
+
+h1{
+  font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;text-align:center;
+  font-size:min(4.4vw,7.4svh);line-height:1.17;letter-spacing:.002em;
+}
+h1 .l{display:block;white-space:nowrap}
+h1 .quase{
+  display:inline-block;font-family:'Permanent Marker',cursive;text-transform:lowercase;
+  font-size:.8em;line-height:.9;transform:translateY(-.1em) rotate(-3deg);margin:0 .06em;
+}
+h1 .fita{
+  display:inline-block;line-height:1;white-space:nowrap;padding:.03em .14em 0;
+  background:var(--lima);
+}
+
+.sub{
+  font-family:'Courier Prime',monospace;text-align:center;text-wrap:balance;
+  font-size:clamp(15px,min(1.45vw,2.5svh),21px);line-height:1.35;max-width:62em;
+}
+
+.palco{flex:1;min-height:0;width:100%;container-type:size;display:flex;justify-content:center;align-items:center}
+.player{
+  position:relative;aspect-ratio:16/9;
+  width:min(calc(100cqw - 14px),calc((100cqh - 14px) * 16 / 9));
+  box-shadow:10px 10px 0 var(--lima);
+}
+.tela{position:absolute;inset:0;background:var(--tinta);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.tela::after{content:"";position:absolute;inset:0;background:var(--grao);opacity:.5;pointer-events:none}
+.tela iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:2}
+.play{
+  position:relative;z-index:1;width:clamp(60px,9cqh,92px);aspect-ratio:1;border-radius:50%;background:var(--lima);
+  display:flex;align-items:center;justify-content:center;
+}
+.play::before{
+  content:"";margin-left:8%;width:0;height:0;border-style:solid;
+  border-width:clamp(11px,1.7cqh,17px) 0 clamp(11px,1.7cqh,17px) clamp(18px,2.8cqh,28px);
+  border-color:transparent transparent transparent var(--tinta);
+}
+.durex{position:absolute;width:clamp(74px,11%,132px);height:clamp(20px,6.4%,34px);background:rgba(212,255,60,.88);z-index:3}
+.durex.a{left:-2.6%;top:-1.6%;transform:rotate(-38deg)}
+.durex.b{right:-2.6%;top:-1.6%;transform:rotate(38deg)}
+
+.frase{font-family:'Courier Prime',monospace;font-weight:700;text-align:center;font-size:clamp(14px,min(1.2vw,2.1svh),18px);line-height:1.3}
+
+@media (prefers-reduced-motion:no-preference){
+  h1,.sub,.player,.frase{animation:sobe .55s cubic-bezier(.2,.7,.2,1) both}
+  .sub{animation-delay:.08s}.player{animation-delay:.16s}.frase{animation-delay:.28s}
+  @keyframes sobe{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+
+@media (max-width:760px),(max-aspect-ratio:1/1){
+  main{justify-content:center;padding:18px 16px 18px;gap:clamp(12px,2svh,18px)}
+  h1{font-size:min(10.2vw,5.2svh);line-height:1.17}
+  h1 .l{display:inline;white-space:normal}
+  .sub{font-size:clamp(14px,4.1vw,16px)}
+  .palco{flex:none;container-type:normal;padding-right:8px}
+  .player{width:100%;box-shadow:7px 7px 0 var(--lima)}
+  .play{width:60px}
+  .play::before{border-width:11px 0 11px 18px}
+  .durex{width:64px;height:18px}
+  .frase{font-size:14px}
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW4JRN7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<main>
+  <h1>
+    <span class="l">Como viralizar no Instagram e TikTok </span>
+    <span class="l">copiando <span class="quase">(quase)</span> <span class="fita">na cara dura</span> estes 14 </span>
+    <span class="l">formatos de vídeos feitos 100% com IA</span>
+  </h1>
+
+  <p class="sub">Eu não inventei nenhum. Nesta aula eu mostro cada original, com número e link, e como refazer no Claude sem aparecer e sem saber editar.</p>
+
+  <div class="palco">
+    <div class="player">
+      <span class="durex a" aria-hidden="true"></span>
+      <span class="durex b" aria-hidden="true"></span>
+      <div class="tela" id="tela" aria-label="Vídeo da aula"><div class="play" aria-hidden="true"></div></div>
+    </div>
+  </div>
+
+  <p class="frase">Ligue o som e assista até o fim. É lá que eu mostro como pegar os 14.</p>
+</main>
+
+<script>
+var CONFIG = {
+  video: "" // URL do embed do player (Panda). Vazio = mostra a capa preta.
+};
+(function () {
+  if (!CONFIG.video) return;
+  var f = document.createElement("iframe");
+  var extra = location.search ? location.search.slice(1) : "";
+  f.src = CONFIG.video + (extra ? (CONFIG.video.indexOf("?") > -1 ? "&" : "?") + extra : "");
+  f.title = "Aula";
+  f.allow = "accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture";
+  f.allowFullscreen = true;
+  document.getElementById("tela").appendChild(f);
+})();
+</script>
+</body>
+</html>
