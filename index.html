@@ -70,6 +70,8 @@ h1 .fita{
 .durex.a{left:-2.6%;top:-1.6%;transform:rotate(-38deg)}
 .durex.b{right:-2.6%;top:-1.6%;transform:rotate(38deg)}
 
+[hidden]{display:none!important}
+.comprar{font-family:'Anton',sans-serif;text-transform:uppercase;text-decoration:none;background:var(--lima);color:var(--tinta);font-size:clamp(20px,min(2vw,3.4svh),30px);line-height:1;padding:.55em 1.3em;border:3px solid var(--tinta);box-shadow:5px 5px 0 var(--tinta)}
 .frase{font-family:'Courier Prime',monospace;font-weight:700;text-align:center;font-size:clamp(14px,min(1.2vw,2.1svh),18px);line-height:1.3}
 
 @media (prefers-reduced-motion:no-preference){
@@ -108,26 +110,39 @@ h1 .fita{
     <div class="player">
       <span class="durex a" aria-hidden="true"></span>
       <span class="durex b" aria-hidden="true"></span>
-      <div class="tela" id="tela" aria-label="Vídeo da aula"><div class="play" aria-hidden="true"></div></div>
+      <div class="tela" id="tela" aria-label="Vídeo da aula"><div class="play" id="capa" aria-hidden="true"></div></div>
     </div>
   </div>
 
-  <p class="frase">Ligue o som e assista até o fim. É lá que eu mostro como pegar os 14.</p>
+  <p class="frase" id="frase">Ligue o som e assista até o fim. É lá que eu mostro como pegar os 14.</p>
+  <a class="comprar" id="comprar" hidden href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero os 14 formatos</a>
 </main>
 
 <script>
 var CONFIG = {
-  video: "" // URL do embed do player (Panda). Vazio = mostra a capa preta.
+  vsl: "",     // nome da pasta do vídeo no servidor (o slug usado no subir.sh). Vazio = capa preta.
+  ctaEm: 383   // segundo em que o botão de compra aparece
 };
 (function () {
-  if (!CONFIG.video) return;
-  var f = document.createElement("iframe");
-  var extra = location.search ? location.search.slice(1) : "";
-  f.src = CONFIG.video + (extra ? (CONFIG.video.indexOf("?") > -1 ? "&" : "?") + extra : "");
-  f.title = "Aula";
-  f.allow = "accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture";
-  f.allowFullscreen = true;
-  document.getElementById("tela").appendChild(f);
+  var a = document.getElementById("comprar");
+  a.href += location.search || "";
+  a.addEventListener("click", function () {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "inicio_checkout", produto: "modelo-viral" });
+  });
+  if (!CONFIG.vsl) return;
+  var tela = document.getElementById("tela");
+  tela.innerHTML = "";
+  var v = document.createElement("div");
+  v.className = "vsl";
+  v.dataset.src = "https://vsl.studioartemis.co/" + CONFIG.vsl + "/";
+  v.dataset.cta = "#comprar";
+  v.dataset.ctaEm = CONFIG.ctaEm;
+  v.dataset.ctaEsconde = "#frase";
+  tela.appendChild(v);
+  var s = document.createElement("script");
+  s.src = "https://vsl.studioartemis.co/vsl.js";
+  document.body.appendChild(s);
 })();
 </script>
 </body>
