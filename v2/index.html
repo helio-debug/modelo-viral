@@ -110,6 +110,8 @@ h1{text-align:center;justify-self:center;font-size:clamp(27px,7.7vw,46px);line-h
 .player{width:min(100%,460px)}
 .frase{text-align:center;align-self:center}.comprar{align-self:center}
 }
+#precoV{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(20px,min(1.9vw,3.4svh),30px)!important;line-height:1.25;color:var(--tinta);opacity:1;max-width:22em}
+#precoV b{background:var(--lima);padding:0 .2em;font-weight:400}
 /*RESTO*/
 #resto{background:#fff;color:var(--tinta);font:400 clamp(17px,1.5vw,20px)/1.5 'Courier Prime',monospace}
 .bl{padding:clamp(56px,8vw,110px) 20px}.w{max-width:1120px;margin:0 auto}
@@ -163,7 +165,8 @@ h1{text-align:center;justify-self:center;font-size:clamp(27px,7.7vw,46px);line-h
   </div>
 
   <p class="frase" id="frase">Ligue o som e assista até o fim. É lá que eu mostro como pegar os 14.</p>
-  <a class="comprar" id="comprar" hidden href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero os 14 formatos</a>
+  <p class="frase" id="precoV" hidden>Acesso completo: <b>12x de R$ 20,25</b> ou <b>R$ 197 à vista</b>. Pagamento único, 7 dias de garantia.</p>
+  <a class="comprar" id="comprar" hidden href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero · 12x R$ 20,25 ou R$ 197</a>
 </main>
 <!--RESTO-->
 <div id="resto" hidden>
@@ -256,8 +259,21 @@ h1{text-align:center;justify-self:center;font-size:clamp(27px,7.7vw,46px);line-h
 <script>
 var CONFIG = {
   vsl: "modelo-viral-v2-a3",     // nome da pasta do vídeo no servidor (o slug usado no subir.sh). Vazio = capa preta.
-  ctaEm: 353   // segundo em que o botão de compra aparece
+  ctaEm: 353,  // segundo em que o preço aparece embaixo do vídeo
+  respiro: 15  // segundos entre o preço e o botão (sugestão Midon, 11/11)
 };
+// Primeiro o preço, depois de CONFIG.respiro segundos o botão e o resto da página.
+(function () {
+  var p = document.getElementById("precoV"), feito = false;
+  new MutationObserver(function () {
+    if (feito || p.hidden) return; feito = true;
+    setTimeout(function () {
+      p.hidden = true;
+      document.getElementById("comprar").hidden = false;
+      document.getElementById("resto").hidden = false;
+    }, CONFIG.respiro * 1000);
+  }).observe(p, { attributes: true, attributeFilter: ["hidden"] });
+})();
 (function () {
   var a = document.getElementById("comprar");
   a.href += location.search || "";
@@ -271,7 +287,7 @@ var CONFIG = {
   var v = document.createElement("div");
   v.className = "vsl";
   v.dataset.src = "https://vsl.studioartemis.co/" + CONFIG.vsl + "/";
-  v.dataset.cta = "#comprar,#resto";
+  v.dataset.cta = "#precoV";
   v.dataset.ctaEm = CONFIG.ctaEm;
   v.dataset.ctaEsconde = "#frase";
   tela.appendChild(v);
