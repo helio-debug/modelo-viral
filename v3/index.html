@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WW4JRN7');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFFFF">
+<title>Modelo Viral · Aula V3</title>
+<meta name="description" content="Como viralizar no Instagram e TikTok copiando (quase) na cara dura estes 14 formatos de vídeos feitos 100% com IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lima:#D4FF3C;
+  --tinta:#0D0D0D;
+  --branco:#FFFFFF;
+  --grao:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--branco);color:var(--tinta)}
+body{-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+main{
+  min-height:100vh;min-height:100svh;height:100vh;height:100svh;
+  display:flex;flex-direction:column;align-items:center;
+  padding:clamp(18px,3.6svh,38px) 28px clamp(16px,2.8svh,30px);
+  gap:clamp(10px,2svh,22px);
+}
+
+h1{
+  font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;text-align:center;
+  font-size:min(4.4vw,7.4svh);line-height:1.17;letter-spacing:.002em;
+}
+h1 .l{display:block;white-space:nowrap}
+h1 .quase{
+  display:inline-block;font-family:'Permanent Marker',cursive;text-transform:lowercase;
+  font-size:.8em;line-height:.9;transform:translateY(-.1em) rotate(-3deg);margin:0 .06em;
+}
+h1 .fita{
+  display:inline-block;line-height:1;white-space:nowrap;padding:.03em .14em 0;
+  background:var(--lima);
+}
+
+.sub{
+  font-family:'Courier Prime',monospace;text-align:center;text-wrap:balance;
+  font-size:clamp(15px,min(1.45vw,2.5svh),21px);line-height:1.35;max-width:62em;
+}
+
+.palco{flex:1;min-height:0;width:100%;container-type:size;display:flex;justify-content:center;align-items:center}
+.player{
+  position:relative;aspect-ratio:16/9;
+  width:min(calc(100cqw - 14px),calc((100cqh - 14px) * 16 / 9));
+  box-shadow:10px 10px 0 var(--lima);
+}
+.tela{position:absolute;inset:0;background:var(--tinta);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.tela::after{content:"";position:absolute;inset:0;background:var(--grao);opacity:.5;pointer-events:none}
+.tela iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:2}
+.play{
+  position:relative;z-index:1;width:clamp(60px,9cqh,92px);aspect-ratio:1;border-radius:50%;background:var(--lima);
+  display:flex;align-items:center;justify-content:center;
+}
+.play::before{
+  content:"";margin-left:8%;width:0;height:0;border-style:solid;
+  border-width:clamp(11px,1.7cqh,17px) 0 clamp(11px,1.7cqh,17px) clamp(18px,2.8cqh,28px);
+  border-color:transparent transparent transparent var(--tinta);
+}
+.durex{position:absolute;width:clamp(74px,11%,132px);height:clamp(20px,6.4%,34px);background:rgba(212,255,60,.88);z-index:3}
+.durex.a{left:-2.6%;top:-1.6%;transform:rotate(-38deg)}
+.durex.b{right:-2.6%;top:-1.6%;transform:rotate(38deg)}
+
+[hidden]{display:none!important}
+.comprar{font-family:'Anton',sans-serif;text-transform:uppercase;text-decoration:none;background:var(--lima);color:var(--tinta);font-size:clamp(20px,min(2vw,3.4svh),30px);line-height:1;padding:.55em 1.3em;border:3px solid var(--tinta);box-shadow:5px 5px 0 var(--tinta)}
+.frase{font-family:'Courier Prime',monospace;font-weight:700;text-align:center;font-size:clamp(14px,min(1.2vw,2.1svh),18px);line-height:1.3}
+
+@media (prefers-reduced-motion:no-preference){
+  h1,.sub,.player,.frase{animation:sobe .55s cubic-bezier(.2,.7,.2,1) both}
+  .sub{animation-delay:.08s}.player{animation-delay:.16s}.frase{animation-delay:.28s}
+  @keyframes sobe{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+
+@media (max-width:760px),(max-aspect-ratio:1/1){
+  main{justify-content:center;padding:18px 16px 18px;gap:clamp(12px,2svh,18px)}
+  h1{font-size:min(10.2vw,5.2svh);line-height:1.17}
+  h1 .l{display:inline;white-space:normal}
+  .sub{font-size:clamp(14px,4.1vw,16px)}
+  .palco{flex:none;container-type:normal;padding-right:8px}
+  .player{width:100%;box-shadow:7px 7px 0 var(--lima)}
+  .play{width:60px}
+  .play::before{border-width:11px 0 11px 18px}
+  .durex{width:64px;height:18px}
+  .frase{font-size:14px}
+}
+
+/* V2: vídeo em formato reels */
+main{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto auto auto 1fr;column-gap:clamp(32px,5vw,84px);align-items:center;padding:8px clamp(28px,5vw,80px)}
+h1,.sub,.frase,.comprar{grid-column:1;text-align:left;justify-self:start}
+h1{grid-row:2;font-size:min(3.9vw,8.2svh);line-height:1.15}
+h1 .l{white-space:normal;display:inline}
+.sub{grid-row:3;max-width:34em;font-size:clamp(16px,min(1.35vw,2.6svh),22px)}
+.frase,.comprar{grid-row:4;margin-top:6px}
+.palco{grid-column:2;grid-row:1/-1;flex:none;height:calc(100svh - 16px);width:calc((100svh - 16px) * 9 / 16 + 14px);container-type:size;align-self:center}
+.player{aspect-ratio:9/16;width:min(calc(100cqw - 14px),calc((100cqh - 14px) * 9 / 16))}
+@media (max-width:760px),(max-aspect-ratio:1/1){
+main{display:flex;flex-direction:column;justify-content:flex-start;padding:12px 16px 14px;gap:8px;height:auto;min-height:100svh}
+h1{text-align:center;justify-self:center;font-size:clamp(27px,7.7vw,46px);line-height:1.14}
+.sub{text-align:center;font-size:clamp(15px,4.1vw,19px);line-height:1.3}.frase{font-size:clamp(14px,3.8vw,17px)!important}main{gap:10px!important;padding-top:12px!important;padding-bottom:18px!important}
+.palco{width:100%;height:auto;flex:none;container-type:normal;padding-right:8px;display:flex;justify-content:center}
+.player{width:min(100%,460px)}
+.frase{text-align:center;align-self:center}.comprar{align-self:center}
+}
+/*RESTO*/
+#resto{background:#fff;color:var(--tinta);font:400 clamp(17px,1.5vw,20px)/1.5 'Courier Prime',monospace}
+.bl{padding:clamp(56px,8vw,110px) 20px}.w{max-width:1120px;margin:0 auto}
+.bl.tinta{background:var(--tinta);color:#fff}.bl.lima{background:var(--lima)}
+#resto h2{font:400 clamp(40px,6.4vw,84px)/1.1 Anton,sans-serif;text-transform:uppercase;margin-bottom:.45em}
+#resto mark{background:var(--lima);color:var(--tinta);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#resto mark.p{background:var(--tinta);color:var(--lima)}
+.eti{display:inline-block;background:var(--lima);color:var(--tinta);font:400 clamp(16px,1.6vw,22px) Anton;text-transform:uppercase;padding:.2em .6em;transform:rotate(-2deg);margin-bottom:1em}.eti.preta{background:var(--tinta);color:var(--lima)}
+.lead{font-size:clamp(19px,1.9vw,24px);max-width:36em;margin-bottom:1.3em}.p2{margin-top:1em;margin-bottom:0}
+.cta{display:inline-block;background:var(--lima);color:var(--tinta);font:400 clamp(22px,2.6vw,34px)/1 Anton;text-transform:uppercase;text-decoration:none;padding:.6em 1.1em;border:4px solid var(--tinta);box-shadow:7px 7px 0 var(--tinta);margin-top:.6em;transition:transform .12s,box-shadow .12s}
+.cta:hover{transform:translate(3px,3px);box-shadow:4px 4px 0 var(--tinta)}.tinta .cta{border-color:var(--lima);box-shadow:7px 7px 0 #fff}.lima .cta{background:var(--tinta);color:var(--lima);box-shadow:7px 7px 0 #fff}
+.micro{font-size:15px;margin-top:1.1em;opacity:.8}
+.ad{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:34px}.col{padding:clamp(22px,3vw,38px);border:4px solid var(--tinta)}
+.col h3{font:400 clamp(28px,3.4vw,42px) Anton;text-transform:uppercase;margin-bottom:.6em}.col ul{list-style:none}.col li{padding:.65em 0;border-top:2px solid rgba(13,13,13,.14)}
+.ant li{text-decoration:line-through;text-decoration-color:#E0352B;text-decoration-thickness:2px}.dep{background:var(--tinta);color:#fff;box-shadow:9px 9px 0 var(--lima)}.dep li{border-color:rgba(255,255,255,.2)}.dep h3{color:var(--lima)}
+.perfil{display:flex;gap:16px;align-items:center;margin-bottom:26px}.perfil img{width:72px;height:72px;border-radius:50%;border:3px solid var(--tinta)}.perfil b{display:block;font-size:22px}.perfil span{font-size:16px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:30px}.nums div{background:var(--tinta);color:#fff;padding:20px}.nums b{display:block;font:400 clamp(38px,5.6vw,76px)/1 Anton;color:var(--lima)}.nums span{font-size:15px}
+.refs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.refs.q4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ref{display:block;text-decoration:none;color:inherit;font-size:13px;line-height:1.25}.ref img{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#222;border:2px solid currentColor}
+.ref b{display:block;font:400 clamp(20px,2.2vw,28px)/1.1 Anton;margin-top:8px}.tinta .ref b{color:var(--lima)}.ref span{display:block;overflow-wrap:anywhere}.ref em{display:block;font-style:normal;opacity:.7;margin-top:2px}
+.nota{font-size:14px;margin-top:22px;opacity:.75;max-width:60em}.nota.cl{color:#fff}
+.loops{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.loop{position:relative;background:var(--tinta)}.loop video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}.loop figcaption{background:var(--lima);font:700 13px 'JetBrains Mono','Courier Prime',monospace;padding:4px 6px;overflow:hidden;white-space:nowrap}
+.stack{list-style:none;margin-bottom:34px}.stack li{padding:.8em 0 .8em 2em;border-top:3px solid var(--tinta);position:relative}.stack li::before{content:'✔';position:absolute;left:.1em;font-weight:700}.stack b{font-weight:700}
+.preco{background:var(--tinta);color:#fff;text-align:center;padding:clamp(28px,4vw,48px);box-shadow:10px 10px 0 #fff}.preco span{display:block;font-size:17px}.preco b{display:block;font:400 clamp(72px,12vw,150px)/1 Anton;color:var(--lima)}.preco em{display:block;font:400 clamp(22px,2.6vw,32px) Anton;font-style:normal;text-transform:uppercase;margin-bottom:.5em}.preco small{display:block;margin-top:1.4em;font-size:15px}.preco .cta{background:var(--lima);color:var(--tinta);border-color:var(--lima);box-shadow:7px 7px 0 #fff}
+.chato{list-style:none;margin-bottom:34px}.chato li{padding:.85em 0;border-top:3px solid var(--tinta)}
+.gar{display:flex;gap:26px;align-items:center;background:var(--lima);padding:clamp(20px,3vw,34px);transform:rotate(-.6deg)}.gar b{font:400 clamp(44px,6vw,72px)/1 Anton;text-transform:uppercase;white-space:nowrap}
+.faq details{border-top:3px solid var(--tinta);padding:.9em 0}.faq summary{cursor:pointer;font:400 clamp(22px,2.6vw,32px) Anton;text-transform:uppercase}.faq details p{margin-top:.6em;max-width:44em}
+.fim h2{max-width:20em}
+@media (max-width:860px){.ad,.nums{grid-template-columns:1fr}.refs,.loops{grid-template-columns:repeat(3,minmax(0,1fr))}.refs.q4{grid-template-columns:repeat(2,minmax(0,1fr))}.gar{flex-direction:column;align-items:flex-start}.cta{width:100%;text-align:center}}
+/*/RESTO*/
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW4JRN7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<main>
+  <h1>
+    <span class="l">Como viralizar no Instagram e TikTok </span>
+    <span class="l">copiando <span class="quase">(quase)</span> <span class="fita">na cara dura</span> estes 14 </span>
+    <span class="l">formatos de vídeos feitos 100% com IA</span>
+  </h1>
+
+  <p class="sub">Eu não inventei nenhum. Nesta aula eu mostro cada original, com número e link, e como refazer no Claude sem aparecer e sem saber editar.</p>
+
+  <div class="palco">
+    <div class="player">
+      <span class="durex a" aria-hidden="true"></span>
+      <span class="durex b" aria-hidden="true"></span>
+      <div class="tela" id="tela" aria-label="Vídeo da aula"><div class="play" id="capa" aria-hidden="true"></div></div>
+    </div>
+  </div>
+
+  <p class="frase" id="frase">Ligue o som e assista até o fim. É lá que eu mostro como pegar os 14.</p>
+  <a class="comprar" id="comprar" hidden href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero os 14 formatos</a>
+</main>
+<!--RESTO-->
+<div id="resto" hidden>
+<section class="bl tinta"><div class="w">
+  <p class="eti">Já deu pra entender</p>
+  <h2>Tu já viu como faz. <mark>Agora falta o teu.</mark></h2>
+  <p class="lead">Os 14 formatos, o roteiro de cada um e os comandos prontos pro Claude. Tu digita uma linha, vai fazer outra coisa e volta com o vídeo na pasta.</p>
+  <a class="cta" href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero os 14 formatos · R$ 197</a><p class="micro">ou 12x de R$ 20,25 · pagamento único · 7 dias de garantia</p>
+</div></section>
+
+<section class="bl"><div class="w">
+  <h2>Olha como tá hoje. <mark>Olha como fica.</mark></h2>
+  <div class="ad">
+    <div class="col ant"><h3>Hoje</h3><ul>
+      <li>Três dias pra editar um vídeo</li><li>Sem saber o que postar amanhã</li><li>Ring light comprada, CapCut baixado, nada no ar</li><li>Vendo o concorrente crescer com um boneco de palito</li><li>Postando pra tua mãe</li></ul></div>
+    <div class="col dep"><h3>Com o Modelo Viral</h3><ul>
+      <li>Uma linha digitada e o MP4 na pasta</li><li>14 formatos que já rodaram, com roteiro pra preencher</li><li>Zero câmera, zero rosto, zero timeline</li><li>Viu um reel bom? Cola o link e o Claude disseca</li><li>Postando o molde que já bateu milhões em outro perfil</li></ul></div>
+  </div>
+  <a class="cta" href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero sair do hoje</a>
+</div></section>
+
+<section class="bl lima"><div class="w">
+  <p class="eti preta">Prova nossa</p>
+  <h2>A gente fez primeiro. Num perfil sobre <mark class="p">manutenção de fábrica.</mark></h2>
+  <div class="perfil"><img src="/assets/fab/perfil.jpg" alt=""><div><b>@fabricaexplicada</b><span>12 reels publicados entre 31/10 e 09/11</span></div></div>
+  <div class="nums"><div><b>11.696</b><span>seguidores</span></div><div><b>726 mil</b><span>views somadas nos 12 reels</span></div><div><b>262.868</b><span>views no melhor reel</span></div></div>
+  <div class="refs q4"><a class="ref" href="https://www.instagram.com/reel/DfNppGIAZfI/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/fab/10.jpg" alt=""><b>262.868</b><span>views</span></a><a class="ref" href="https://www.instagram.com/reel/DfSzRrRFeoq/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/fab/08.jpg" alt=""><b>113.245</b><span>views</span></a><a class="ref" href="https://www.instagram.com/reel/DfQOfZHjauS/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/fab/09.jpg" alt=""><b>92.167</b><span>views</span></a><a class="ref" href="https://www.instagram.com/reel/DfahtxwjaNw/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/fab/02.jpg" alt=""><b>84.392</b><span>views</span></a></div>
+  <p class="lead p2">Se isso andou falando de manutenção de máquina, me explica qual é a desculpa do teu assunto.</p>
+  <p class="lead p2">No @heliocosta.jr, um reel de teste no formato 07 fez 17,5 mil views, 1.334 salvos e 474 comentários. E quem te vende isso é o Hélio Costa Jr., fundador do Studio Artemis, com mais de 200 clientes atendidos.</p>
+  <p class="nota">Números públicos do Instagram em 09/11/2026. Resultado de perfis específicos, sem promessa de views, seguidores ou renda.</p>
+</div></section>
+
+<section class="bl tinta"><div class="w">
+  <p class="eti">Prova dos outros</p>
+  <h2>E aqui estão os que a gente copiou. <mark>Clica e confere.</mark></h2>
+  <div class="refs"><a class="ref" href="https://www.instagram.com/reel/DepCNK_s74x/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/01.jpg" alt=""><b>35,8 mi views</b><span>@thequietfixx</span><em>Bonecos em metáfora</em></a><a class="ref" href="https://www.instagram.com/reel/DfcxCxTBVsw/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/02.jpg" alt=""><b>79,1 mil views</b><span>@ultra.skills</span><em>Catálogo em tela de terminal</em></a><a class="ref" href="https://www.instagram.com/reel/DeZ-ddqMWFE/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/03.jpg" alt=""><b>10,5 mi views</b><span>@speedy_devv</span><em>Como funciona em close escuro</em></a><a class="ref" href="https://www.instagram.com/reel/DeSTTeiJCTb/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/04.jpg" alt=""><b>1,37 mi views</b><span>@speedy_devv</span><em>Notícia animada</em></a><a class="ref" href="https://www.instagram.com/reel/DfMeMYIhA8-/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/05.jpg" alt=""><b>1,78 mi views</b><span>@yamiuaeen</span><em>Pictograma branco no preto</em></a><a class="ref" href="https://www.instagram.com/reel/DeyusrQMOmi/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/06.jpg" alt=""><b>328 mil views</b><span>@speedy_devv</span><em>Bastidor não filmei nada</em></a><a class="ref" href="https://www.instagram.com/reel/DeIQfJsz2vc/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/07.jpg" alt=""><b>160 mil views</b><span>@speedy_devv</span><em>Desenho de linha animado</em></a><a class="ref" href="https://www.instagram.com/reel/Deh74uvPQWt/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/08.jpg" alt=""><b>421 mil views</b><span>@igao.ia</span><em>Mascote pixel + comenta X</em></a><a class="ref" href="https://www.instagram.com/reel/DfII6u2Nl_p/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/09.jpg" alt=""><b>249 mil views</b><span>@ultra.skills</span><em>Lista de 3 em motion</em></a><a class="ref" href="https://www.instagram.com/reel/DfDwNXINUaD/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/10.jpg" alt=""><b>9,3 mi views</b><span>@segredosdoconhecimento</span><em>Curiosidade com imagem hiper-realista</em></a><a class="ref" href="https://www.instagram.com/reel/DeUjAQFM3H1/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/11.jpg" alt=""><b>1,77 mi views</b><span>@rick.theengineer</span><em>X explicado em cenário 3D</em></a><a class="ref" href="https://www.tiktok.com/@tecosobrevive/video/7705230213176675592" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/12.jpg" alt=""><b>630 mil views</b><span>@tecosobrevive</span><em>POV em quadrinho com voto</em></a><a class="ref" href="https://www.instagram.com/reel/DfKFK7RJdjl/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/13.jpg" alt=""><b>489 mil views</b><span>@mrcreates.ai</span><em>Quadro branco + avatar cartoon</em></a><a class="ref" href="https://www.instagram.com/reel/De9J0PrNJxi/" target="_blank" rel="noopener"><img loading="lazy" src="/assets/ref/14.jpg" alt=""><b>422 mil views</b><span>@thomassmithai</span><em>Avatar 3D no creme com carimbos</em></a></div>
+  <p class="nota cl">Números dos perfis originais, coletados em novembro de 2026. Não sei se todos usaram IA. Sei que a gente refez os 14 com IA.</p>
+  <a class="cta" href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero os 14 formatos · R$ 197</a>
+</div></section>
+
+<section class="bl"><div class="w">
+  <h2>Isso aqui saiu de <mark>uma linha digitada.</mark></h2>
+  <p class="lead">Os 14 rodando agora. Cada um foi feito com o comando que tá na legenda dele, o mesmo que tu recebe.</p>
+  <div class="loops"><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n01.mp4"></video><figcaption>/bonecos</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n02.mp4"></video><figcaption>/catalogo</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n03.mp4"></video><figcaption>/como-funciona</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n04.mp4"></video><figcaption>/noticia</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n05.mp4"></video><figcaption>/pictograma</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n06.mp4"></video><figcaption>/bastidor</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n07.mp4"></video><figcaption>/linha</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n08.mp4"></video><figcaption>/mascote</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n09.mp4"></video><figcaption>/lista-3</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n10.mp4"></video><figcaption>/curiosidade</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n11.mp4"></video><figcaption>/explicado</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n12.mp4"></video><figcaption>/pov</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n13.mp4"></video><figcaption>/quadro-branco</figcaption></figure><figure class="loop"><video muted loop playsinline preload="none" data-src="/assets/loops/n14.mp4"></video><figcaption>/avatar-creme</figcaption></figure></div>
+</div></section>
+
+<section class="bl lima"><div class="w">
+  <h2>O que cai na tua mão</h2>
+  <ul class="stack">
+    <li><b>PDF com os 14 formatos.</b> Link do original, número, o que copiar e roteiro pra preencher.</li>
+    <li><b>Pasta do Claude com os 14 comandos.</b> Esses que tu viu rodando.</li>
+    <li><b>Guia de configuração.</b> Tu cola um texto uma vez e o Claude instala tudo.</li>
+    <li><b>Baixar, dissecar e replicar.</b> Cola o link de qualquer reel ou TikTok e ele vira comando novo.</li>
+    <li><b>Banco de ganchos.</b> 16 tipos de abertura medidos em 184 reels.</li>
+    <li><b>6 animações curtas.</b> Rota 3D, palito, raio-x, gráfico, degraus e "e se".</li>
+  </ul>
+  <div class="preco"><span>Pagamento único</span><b>R$ 197</b><em>ou 12x de R$ 20,25</em><a class="cta" href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero agora</a><small>Sem aula pra assistir. Sem comunidade. Tu baixa e usa.</small></div>
+</div></section>
+
+<section class="bl"><div class="w">
+  <h2>Pra eu não te <mark>vender errado</mark></h2>
+  <ul class="chato">
+    <li><b>Precisa de computador.</b> Windows ou Mac. Pelo celular não dá.</li>
+    <li><b>Precisa do Claude pago,</b> contratado à parte. O pacote foi feito pro Claude Code.</li>
+    <li><b>6 dos 14 formatos usam imagem gerada</b> e pedem ChatGPT pago também. Os outros 8 saem só com o Claude.</li>
+    <li><b>Não prometo viral.</b> A maioria dos vídeos de qualquer perfil vai mal. Quem posta 14 formatos que já rodaram compra mais bilhete, só isso.</li>
+  </ul>
+  <div class="gar"><b>7 dias</b><p>Compra, instala, faz o vídeo. Não gostou, pede o dinheiro de volta dentro de 7 dias.</p></div>
+</div></section>
+
+<section class="bl faq"><div class="w">
+  <h2>Antes que tu pergunte</h2>
+  <details><summary>Preciso saber editar ou programar?</summary><p>Não. Tu digita o comando e pede ajuste em português.</p></details>
+  <details><summary>Preciso aparecer?</summary><p>Não. Nenhum dos 14 usa rosto.</p></details>
+  <details><summary>Funciona no meu nicho?</summary><p>Tem original de tecnologia, psicologia e curiosidade na lista, e o nosso roda em manutenção de fábrica. O formato independe do assunto. O resultado depende do tema e de tu postar.</p></details>
+  <details><summary>Copiar o formato me dá problema?</summary><p>Tu copia a estrutura e troca assunto, personagem e imagem. Repostar o vídeo dos outros é outra história, e isso rende denúncia.</p></details>
+  <details><summary>O SpyOps vem junto?</summary><p>O SpyOps completo é outro produto. Aqui vem a parte de baixar e dissecar qualquer vídeo pelo link.</p></details>
+  <details><summary>Quanto custa no total?</summary><p>R$ 197 aqui, mais a assinatura do Claude. Nos 6 formatos com imagem, mais o ChatGPT. Voz grátis já vem no pacote.</p></details>
+</div></section>
+
+<section class="bl tinta fim"><div class="w">
+  <h2>Daqui a uma semana vai aparecer mais um boneco no teu feed, <mark>com um número absurdo embaixo.</mark></h2>
+  <p class="lead">Tu já sabe o que é aquilo. Só falta decidir de que lado da tela tu vai estar.</p>
+  <a class="cta" href="https://payfast.greenn.com.br/203475/offer/w45Rr0">Quero os 14 formatos · R$ 197</a><p class="micro">ou 12x de R$ 20,25 · pagamento único · 7 dias de garantia</p>
+  <p class="nota cl">Resultados de perfis específicos. Não representam promessa de views, seguidores ou renda.</p>
+</div></section>
+</div>
+<!--/RESTO-->
+
+<script>
+var CONFIG = {
+  vsl: "modelo-viral-v3-a1",     // nome da pasta do vídeo no servidor (o slug usado no subir.sh). Vazio = capa preta.
+  ctaEm: 215   // segundo em que o botão de compra aparece
+};
+(function () {
+  var a = document.getElementById("comprar");
+  a.href += location.search || "";
+  a.addEventListener("click", function () {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "inicio_checkout", produto: "modelo-viral" });
+  });
+  if (!CONFIG.vsl) return;
+  var tela = document.getElementById("tela");
+  tela.innerHTML = "";
+  var v = document.createElement("div");
+  v.className = "vsl";
+  v.dataset.src = "https://vsl.studioartemis.co/" + CONFIG.vsl + "/";
+  v.dataset.cta = "#comprar,#resto";
+  v.dataset.ctaEm = CONFIG.ctaEm;
+  v.dataset.ctaEsconde = "#frase";
+  tela.appendChild(v);
+  var s = document.createElement("script");
+  s.src = "https://vsl.studioartemis.co/vsl.js";
+  document.body.appendChild(s);
+})();
+/*RESTOJS*/
+(function(){var q=location.search||"";document.querySelectorAll("a.cta,#comprar").forEach(function(a){if(a.className==="cta")a.href+=q;a.addEventListener("click",function(){if(window.fbq){try{fbq("track","InitiateCheckout",{value:197,currency:"BRL",content_name:"Modelo Viral"})}catch(e){}}})});
+var obs=("IntersectionObserver" in window)?new IntersectionObserver(function(E){E.forEach(function(e){var v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;v.play().catch(function(){})}else v.pause()})},{rootMargin:"200px"}):null;
+document.querySelectorAll("video[data-src]").forEach(function(v){if(obs)obs.observe(v);else v.src=v.dataset.src});})();
+/*/RESTOJS*/
+</script>
+</body>
+</html>
